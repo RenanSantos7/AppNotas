@@ -1,0 +1,11 @@
+.aside {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    ul {
+        list-style: none;
+        padding-block: 2rem;
+    }
+}

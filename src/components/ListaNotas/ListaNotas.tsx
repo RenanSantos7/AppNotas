@@ -1,18 +1,19 @@
-import { Box } from "@mui/material";
-import { ReactNode } from "react";
+import styled from 'styled-components'
+// import styles from './ListaNotas.module.css'
+import { ReactNode } from 'react'
 
+const Box = styled.div`
+	display: flex;
+	padding: 2rem;
+	gap: 1rem;
+	flex-wrap: wrap;
+`
 
-export default function ListaNotas({children}:{children: ReactNode}) {
-    return (
-        <Box
-            display='flex'
-            gap={2}
-            p={4}
-            sx={{
-                flexFlow: 'row wrap'
-            }}
-        >
-            {children}
-        </Box>
-    )
+export default function ListaNotas({ children }: { children: ReactNode }) {
+	return <Box>{children}</Box>
+	// return (
+	// 	<div className={styles.box}>
+	// 		{children}
+	// 	</div>
+	// )
 }

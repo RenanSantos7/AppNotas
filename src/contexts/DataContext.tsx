@@ -4,14 +4,25 @@ import { notasMoc } from './mockup';
 
 export const DataContext = createContext(null);
 
+type IView = 'lista' | 'grade'
+
 const DataProvider = ({ children }:{children: ReactNode}) => {
     const [notas, setNotas] = useState<INota[]>([...notasMoc])
     const [notaEditanda, setNotaEditanda] = useState(null)
+    const [view, setView] = useState('grade')
+    const [nomePag, setNomePag] = useState('Notas')
+
+    function toggleView() {
+        if (view === 'lista') setView('grade')
+        if (view === 'grade') setView('lista')
+    }
 
     return (
         <DataContext.Provider value={{
             notas, setNotas,
-            notaEditanda, setNotaEditanda
+            notaEditanda, setNotaEditanda,
+            view, toggleView,
+            nomePag, setNomePag
         }}>
             {children}
         </DataContext.Provider>

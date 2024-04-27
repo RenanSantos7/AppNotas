@@ -1,14 +1,13 @@
-import { styled } from '@mui/material'
 import { ReactNode } from 'react'
+import styled from 'styled-components'
+
+const Titulo = styled.h4`
+	margin-bottom: calc(2 * var(--und));
+	font-weight: 500;
+	font-size: 1.8rem;
+	color: var(--color-title);
+`
 
 export default function Titulo4({ children }: { children: ReactNode }) {
-    const Titulo = styled('h4')(
-        ({ theme }) => ({
-            marginBottom: theme.spacing(2),
-            fontWeight: '500',
-            fontSize: '1.8rem',
-        })
-    )
-
 	return <Titulo>{children}</Titulo>
 }

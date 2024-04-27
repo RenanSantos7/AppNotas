@@ -1,0 +1,27 @@
+.itemMenu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    border-radius: 0 9rem 9rem 0;
+    cursor: pointer;
+    
+    &:hover {
+        background-color: var(--color-primary-light-trans);
+    }
+}
+
+.clicked {
+    background-color: var(--color-primary-light);
+    
+    &:hover {
+        background-color: var(--color-primary-light);
+    }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    .clicked{
+        color: var(--color-background);
+    }
+}
