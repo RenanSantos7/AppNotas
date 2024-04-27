@@ -9,9 +9,8 @@
 		"useDefineForClassFields": true,
 		
 		//Modules
-		"module": "NodeNext",
-		"moduleResolution": "NodeNext",
-		"types": ["jest", "@testing-library/jest-dom"],
+		"module": "ES2015",
+		"moduleResolution": "bundler",
 		"resolveJsonModule": true,
 		"allowImportingTsExtensions": true,
 		
