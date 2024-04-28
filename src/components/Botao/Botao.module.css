@@ -1,6 +1,6 @@
 .botao {
-    padding: .25rem .5rem;
-    border-radius: var(--br1);
+    padding: .5rem;
+    border-radius: var(--br2);
     display: flex;
     align-items: center;
     gap: .5rem;
@@ -17,6 +17,10 @@
     &:hover {
         background-color: var(--color-primary-dark);
     }
+    
+    &:active {
+        background-color: var(--color-primary);
+    }
 }
 
 .delineado {
@@ -24,6 +28,11 @@
     color: var(--color-primary);
 
     &:hover {
+        background-color: var(--color-primary-light-trans);
+        color: var(--color-primary-dark)
+    }
+    
+    &:active {
         background-color: var(--color-primary-light);
     }
 }

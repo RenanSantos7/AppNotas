@@ -19,6 +19,11 @@
     }
 }
 
+.nota.listada {
+    width: 100%;
+    height: max-content;
+}
+
 .tags {
     display: flex;
     gap: 1ch;
