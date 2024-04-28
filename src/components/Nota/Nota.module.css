@@ -27,15 +27,6 @@
 .tags {
     display: flex;
     gap: 1ch;
-
-    span {
-        background-color: var(--cinza4);
-        padding: .25rem .5rem;
-        border-radius: 8rem;
-        color: white
-    }
-
-
 }
 
 .header {

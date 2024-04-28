@@ -5,6 +5,7 @@ import { Titulo6 } from '../Titulos'
 import { useContext } from 'react'
 import { DataContext } from '../../contexts/DataContext'
 import classNames from 'classnames'
+import Pill from './Pill/Pill'
 
 interface NotaProps {
 	nota: INota
@@ -16,6 +17,10 @@ export default function Nota({ nota }: NotaProps) {
 
     const { view } = useContext(DataContext)
 
+    function filtrar(tag: string) {
+        console.log('fitra pela tag', tag)
+    }
+
 	return (
         <article className={classNames(
             styles.nota,
@@ -23,7 +28,9 @@ export default function Nota({ nota }: NotaProps) {
         )}>
             <header className={styles.header}>
                 <div className={styles.tags}>
-                    {tags.map((tag, i) => <span key={i}>{tag}</span>)}
+                    {tags.map((tag, i) => (
+                        <Pill key={i} onClick={() => filtrar(tag)}>{tag}</Pill>
+                    ))}
                 </div>
                 <button type='button' title='Editar' className={styles.btEdit}>
                     <Icone>edit</Icone>
