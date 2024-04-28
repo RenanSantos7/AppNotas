@@ -2,13 +2,16 @@ import { useContext } from 'react'
 import styles from './Aside.module.css'
 import ItemMenu from './ItemMenu/ItemMenu'
 import { DataContext } from '../../contexts/DataContext'
+import classNames from 'classnames'
 
 export default function Aside() {
-    const { abrirModalEdit } = useContext(DataContext)
+    const { abrirModalEdit, asideAberto } = useContext(DataContext)
     
-
 	return (
-		<aside className={styles.aside}>
+        <aside className={classNames(
+            styles.aside,
+            !asideAberto && styles.colapsado
+        )}>
             <nav>
                 <ul>
                     <ItemMenu icone='add' label='Nova nota' onClick={abrirModalEdit} />

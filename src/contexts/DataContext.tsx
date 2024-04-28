@@ -9,7 +9,8 @@ type IView = 'lista' | 'grade'
 const DataProvider = ({ children }:{children: ReactNode}) => {
     const [notas, setNotas] = useState<INota[]>([...notasMoc])
     const [notaEditanda, setNotaEditanda] = useState(null)
-    const [modalEdit, setModalEdit] = useState(true)
+    const [modalEdit, setModalEdit] = useState(false)
+    const [asideAberto, setAside] = useState(true)
     const [view, setView] = useState('grade')
     const [nomePag, setNomePag] = useState('Notas')
 
@@ -26,13 +27,18 @@ const DataProvider = ({ children }:{children: ReactNode}) => {
         if (view === 'grade') setView('lista')
     }
     
+    function toggleAside() {
+        setAside(prev => !prev)
+    }
+    
     return (
         <DataContext.Provider value={{
             notas, setNotas,
             notaEditanda, setNotaEditanda,
             view, toggleView,
             nomePag, setNomePag,
-            modalEdit, abrirModalEdit, fecharModalEdit
+            modalEdit, abrirModalEdit, fecharModalEdit,
+            asideAberto, toggleAside
         }}>
             {children}
         </DataContext.Provider>

@@ -10,12 +10,12 @@ import { DataContext } from '../../contexts/DataContext'
 export default function TopBar() {
 	const [pesquisa, setPesquisa] = useState('')
 
-	const { nomePag } = useContext(DataContext)
+	const { nomePag, toggleAside } = useContext(DataContext)
 
 	return (
 		<header className={styles.topbar}>
 			<div>
-				<BotaoIcon onClick={() => console.log('cliquei')}>
+				<BotaoIcon onClick={toggleAside}>
 					<Icone>menu</Icone>
 				</BotaoIcon>
 
