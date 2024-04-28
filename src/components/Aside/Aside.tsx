@@ -1,11 +1,18 @@
 import { useContext } from 'react'
 import styles from './Aside.module.css'
-import ItemMenu from './ItemMenu/ItemMenu'
+import BtNovaNota from './components/BtNovaNota'
+import ItemMenu from './components/ItemMenu'
 import { DataContext } from '../../contexts/DataContext'
 import classNames from 'classnames'
 
 export default function Aside() {
-    const { abrirModalEdit, asideAberto } = useContext(DataContext)
+    const { asideAberto } = useContext(DataContext)
+
+    const links = [
+        { id: 0, icone: 'label', label: 'Tags', path: '/tags' },
+        { id: 1, icone: 'archive', label: 'Arquivo', path: '/arquivo' },
+        { id: 2, icone: 'delete', label: 'Lixeira', path: '/lixeira' },
+    ]
     
 	return (
         <aside className={classNames(
@@ -14,9 +21,14 @@ export default function Aside() {
         )}>
             <nav>
                 <ul>
-                    <ItemMenu icone='add' label='Nova nota' onClick={abrirModalEdit} />
-                    <ItemMenu icone='archive' label='Arquivo' />
-                    <ItemMenu icone='delete' label='Lixeira' />
+                    <li>
+                        <BtNovaNota />
+                    </li>
+                    {links.map(link => (
+                        <li key={link.id}>
+                            <ItemMenu path={link.path} icone={link.icone} label={link.label} />
+                        </li>
+                    ))}
                 </ul>
             </nav>
 		</aside>

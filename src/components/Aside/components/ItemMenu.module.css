@@ -7,13 +7,14 @@
     border-radius: 0 9rem 9rem 0;
     cursor: pointer;
     transition: width .6s ease-in-out;
+    width: 100%;
     
     &:hover {
         background-color: var(--color-primary-light-trans);
     }
 }
 
-.clicked {
+.active {
     background-color: var(--color-primary-light);
     
     &:hover {
@@ -34,7 +35,7 @@
 }
 
 @media screen and (prefers-color-scheme: dark) {
-    .clicked{
+    .active{
         color: var(--color-background);
     }
 }
