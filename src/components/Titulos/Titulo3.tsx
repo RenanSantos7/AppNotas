@@ -1,12 +1,19 @@
-import { ReactNode } from 'react'
-import styled from 'styled-components'
+import { styled } from '@mui/material'
+import { TituloProps } from './types'
 
-const Titulo = styled.h3`
-	margin-bottom: calc(2 * var(--und));
-	font-weight: 400;
-	font-size: 2.25rem;
-`
+const Titulo = styled('h3')(
+    ({theme}) => ({
+        marginBottom: '1rem',
+        fontWeight: '400',
+        fontSize: '2.25rem',
+        color: theme.palette.text.secondary,
+    })
+)
 
-export default function Titulo3({ children }: { children: ReactNode }) {
-	return <Titulo>{children}</Titulo>
+export default function Titulo3({ children, style }:TituloProps) {
+    return (
+        <Titulo
+            style={style}
+        >{children}</Titulo>
+    )
 }

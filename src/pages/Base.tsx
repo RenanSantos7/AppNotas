@@ -7,7 +7,7 @@ export default function Base() {
             <TopBar />
             <Container>
                 <Aside />
-                <main>
+                <main style={{overflow: 'auto', flexGrow: 1}}>
                     <Outlet />
                 </main>
             </Container>

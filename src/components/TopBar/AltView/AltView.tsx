@@ -1,7 +1,7 @@
-import BotaoIcon from '../../BotaoIcon/BotaoIcon'
 import Icone from '../../Icone/Icone'
 import { useContext } from 'react'
 import { DataContext } from '../../../contexts/DataContext'
+import { IconButton } from '@mui/material'
 
 interface Contexto {
 	view: 'lista' | 'grade'
@@ -14,8 +14,9 @@ export function AltView() {
 	const icone = view === 'lista' ? 'view_list' : 'view_module'
 
 	return (
-		<BotaoIcon onClick={toggleView}>
+		<IconButton onClick={toggleView}>
 			<Icone>{icone}</Icone>
-		</BotaoIcon>
+		</IconButton>
 	)
 }
+
