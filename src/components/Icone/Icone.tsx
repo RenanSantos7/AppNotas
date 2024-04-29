@@ -3,10 +3,11 @@ import classNames from "classnames"
 interface IconeProps {
     children: string
     style?: React.CSSProperties
-    className?: React.HTMLAttributes<HTMLSpanElement>
+    className?: string
+    onClick?: () => void
 }
 
-export default function Icone({ children, className, style }: IconeProps) {
+export default function Icone({ children, className, style, onClick }: IconeProps) {
     return (
         <span
             className={classNames(
@@ -14,6 +15,7 @@ export default function Icone({ children, className, style }: IconeProps) {
                 className
             )}
             style={style}
+            onClick={onClick}
         >{children}</span>
     )
 }
