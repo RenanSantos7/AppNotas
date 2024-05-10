@@ -9,7 +9,7 @@
     "start": "npm run server && npm run dev --open",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "server": "json-server --watch public/data/db.json --port 3000"
+    "server": "json-server --watch public/data/db.json --port 3100"
   },
   "dependencies": {
     "classnames": "^2.5.1",

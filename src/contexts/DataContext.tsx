@@ -33,7 +33,7 @@ const DataProvider = ({ children }:{children: ReactNode}) => {
     }
 
     async function getData(data:string, setData: Dispatch<SetStateAction<any>>) {
-        const endPoint = 'http://localhost:3000'
+        const endPoint = 'http://localhost:3100'
 
         try {
             const resposta = await fetch(`${endPoint}/${data}`);
