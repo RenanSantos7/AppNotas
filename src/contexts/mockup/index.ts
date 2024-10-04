@@ -1,1 +1,1 @@
-export * from './notas'
+export * from './notas';

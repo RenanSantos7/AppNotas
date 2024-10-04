@@ -1,7 +1,7 @@
-import { createTheme } from '@mui/material'
-import { medidas } from './medidas'
+import { createTheme } from '@mui/material';
+import { medidas } from './medidas';
 
-const paper = '#FFFFFF'
+const paper = '#FFFFFF';
 
 export const lightTheme = createTheme({
 	palette: {
@@ -10,7 +10,7 @@ export const lightTheme = createTheme({
 			main: '#8BDEF1',
 			dark: '#B7EBF7',
 			light: '#B7EBF7',
-			contrastText: paper
+			contrastText: paper,
 		},
 		secondary: {
 			main: '#38D6CA',
@@ -20,13 +20,13 @@ export const lightTheme = createTheme({
 		},
 		background: {
 			default: '#FAFAFA',
-			paper: paper
+			paper: paper,
 		},
 		text: {
 			primary: '#2b2b2b',
 			secondary: '#000000',
-			disabled: 'hsla(0, 0%, 38%, 0.38)'
+			disabled: 'hsla(0, 0%, 38%, 0.38)',
 		},
-		...medidas
+		...medidas,
 	},
-})
+});

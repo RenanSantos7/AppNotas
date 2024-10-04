@@ -1,7 +1,7 @@
-import { createTheme } from '@mui/material'
-import { medidas } from './medidas'
+import { createTheme } from '@mui/material';
+import { medidas } from './medidas';
 
-const paper = '#303134'
+const paper = '#303134';
 
 export const darkTheme = createTheme({
 	palette: {
@@ -20,13 +20,13 @@ export const darkTheme = createTheme({
 		},
 		background: {
 			default: '#202124',
-			paper: paper
+			paper: paper,
 		},
 		text: {
 			primary: '#e2e2e2',
 			secondary: '#ffffff',
-			disabled: 'hsla(0, 0%, 66%, 0.38)'
+			disabled: 'hsla(0, 0%, 66%, 0.38)',
 		},
-		...medidas
+		...medidas,
 	},
-})
+});
