@@ -1,7 +1,7 @@
-import { RouterProvider } from 'react-router-dom'
-import DataProvider from './contexts/DataContext.tsx'
-import router from './router'
-import { AppThemeProvider } from './contexts/ThemeContext.tsx'
+import { RouterProvider } from 'react-router-dom';
+import DataProvider from './contexts/DataContext.tsx';
+import router from './router';
+import { AppThemeProvider } from './contexts/ThemeContext.tsx';
 
 export default function App() {
 	return (
@@ -10,5 +10,5 @@ export default function App() {
 				<RouterProvider router={router} />
 			</AppThemeProvider>
 		</DataProvider>
-	)
+	);
 }
